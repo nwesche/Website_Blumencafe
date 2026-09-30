@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f4ef">
+  <title>Blüte & Bohne – Frisch gebunden, frisch gebrüht · Fußgängerzone</title>
+  <meta name="description" content="Kaffee to go, Blüten-Spezialitäten, frische Sträuße und Bohnen für zuhause – vorbestellen und ohne Warten abholen, mitten in der Fußgängerzone.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%237d8f76'/><circle cx='32' cy='26' r='7' fill='%23f4e4e0'/><circle cx='24' cy='32' r='7' fill='%23f4e4e0'/><circle cx='40' cy='32' r='7' fill='%23f4e4e0'/><circle cx='28' cy='40' r='7' fill='%23f4e4e0'/><circle cx='36' cy='40' r='7' fill='%23f4e4e0'/><circle cx='32' cy='34' r='5' fill='%233b2a22'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Blüte & Bohne – Startseite">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#7d8f76"/><g fill="#f4e4e0"><circle cx="20" cy="15" r="4.6"/><circle cx="14.6" cy="19" r="4.6"/><circle cx="25.4" cy="19" r="4.6"/><circle cx="17" cy="25" r="4.6"/><circle cx="23" cy="25" r="4.6"/></g><ellipse cx="20" cy="20.5" rx="2.6" ry="3.6" fill="#3b2a22" transform="rotate(25 20 20.5)"/></svg>
+        <span class="logo__text" data-shop="name">Blüte & Bohne</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#karte">Kaffee</a>
+        <a href="#straeusse">Sträuße</a>
+        <a href="#bohnen">Bohnen</a>
+        <a href="anlaesse.html">Anlässe</a>
+        <a href="#besuch">Besuch</a>
+      </nav>
+      <div class="header__actions">
+        <button class="bag-btn" id="bagOpen" aria-label="To-go-Tüte öffnen"><svg><use href="#i-bag"/></svg><span class="bag-btn__count" id="bagCount">0</span></button>
+        <button class="burger" id="burger" aria-label="Menü" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <span class="status" id="openStatus"><i></i><span>&nbsp;</span></span>
+          <h1>Frisch gebunden.<br>Frisch gebrüht.<br><em>Für unterwegs.</em></h1>
+          <p class="hero__lead">Blumen und Kaffee mitten in der Fußgängerzone. Online vorbestellen, vorbeikommen, mitnehmen – ohne Anstehen. Dein Kaffee ist in ca. 5 Minuten fertig, dein Strauß schon gebunden.</p>
+          <div class="hero__cta" data-float-anchor>
+            <a href="#karte" class="btn btn--primary"><svg><use href="#i-cup"/></svg> To go vorbestellen</a>
+            <a href="#straeusse" class="btn btn--ghost">Sträuße ansehen</a>
+          </div>
+          <ul class="hero__facts">
+            <li><svg><use href="#i-clock"/></svg><span><b>~5 Min.</b> bis abholbereit</span></li>
+            <li><svg><use href="#i-leaf"/></svg><span><b data-shop="reusable">−0,30 €</b> mit Mehrwegbecher</span></li>
+            <li><svg><use href="#i-pin"/></svg><span><b data-shop="area">Fußgängerzone</b> <span data-shop="street">Hauptstraße 12</span></span></li>
+          </ul>
+        </div>
+
+        <div class="hero__art" aria-hidden="true">
+          <div class="arch">
+            <svg class="arch__bouquet" viewBox="0 0 220 300">
+              <g stroke="#3b2a22" stroke-width="2" stroke-linecap="round" fill="none"><path d="M110 250 L78 120 M110 250 L100 95 M110 250 L128 100 M110 250 L150 125 M110 250 L60 150 M110 250 L165 160"/></g>
+              <g stroke="#3b2a22" stroke-width="1.6">
+                <ellipse cx="70" cy="165" rx="16" ry="8" fill="#9fb096" transform="rotate(-35 70 165)"/>
+                <ellipse cx="156" cy="170" rx="16" ry="8" fill="#9fb096" transform="rotate(35 156 170)"/>
+                <ellipse cx="92" cy="140" rx="13" ry="6" fill="#b7c4ae" transform="rotate(-60 92 140)"/>
+              </g>
+              <g stroke="#3b2a22" stroke-width="1.6">
+                <g fill="#e9b8b0"><circle cx="78" cy="108" r="11"/><circle cx="66" cy="118" r="11"/><circle cx="90" cy="118" r="11"/><circle cx="72" cy="131" r="11"/><circle cx="85" cy="131" r="11"/></g>
+                <circle cx="78" cy="121" r="6" fill="#f6d9a8"/>
+                <path d="M100 70c-14 0-18 22-2 28 3 1 7 1 10-1 12-8 6-27-8-27z" fill="#f3d5c4"/>
+                <path d="M100 76c-4 8-2 15 3 19M106 74c2 8 1 15-3 21" fill="none"/>
+                <g fill="#c9b6d9"><circle cx="128" cy="88" r="10"/><circle cx="140" cy="96" r="10"/><circle cx="118" cy="99" r="10"/><circle cx="132" cy="108" r="10"/></g>
+                <circle cx="129" cy="98" r="5" fill="#fff5e6"/>
+                <g fill="#e9b8b0"><circle cx="152" cy="116" r="9"/><circle cx="162" cy="124" r="9"/><circle cx="146" cy="128" r="9"/><circle cx="157" cy="136" r="9"/></g>
+                <circle cx="154" cy="126" r="4.5" fill="#f6d9a8"/>
+                <g fill="#fff5e6"><circle cx="56" cy="148" r="8"/><circle cx="48" cy="154" r="8"/><circle cx="60" cy="158" r="8"/></g>
+                <circle cx="55" cy="154" r="3.5" fill="#f6d9a8"/>
+                <g fill="#fff5e6"><circle cx="168" cy="156" r="8"/><circle cx="176" cy="162" r="8"/><circle cx="165" cy="167" r="8"/></g>
+                <circle cx="170" cy="162" r="3.5" fill="#f6d9a8"/>
+              </g>
+              <path d="M58 175 L162 175 L124 292 L96 292 Z" fill="#efe4d6" stroke="#3b2a22" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M58 175 L110 205 L162 175" fill="none" stroke="#3b2a22" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M98 232 q12 8 24 0" fill="none" stroke="#c77f73" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <svg class="arch__cup" viewBox="0 0 120 170">
+              <rect x="16" y="14" width="88" height="18" rx="7" fill="#3b2a22"/>
+              <rect x="30" y="6" width="60" height="12" rx="5" fill="#3b2a22"/>
+              <path d="M22 32 L34 158 a6 6 0 0 0 6 5 H80 a6 6 0 0 0 6-5 L98 32 Z" fill="#fffdf9" stroke="#3b2a22" stroke-width="2.4" stroke-linejoin="round"/>
+              <path d="M26.5 76 L93.5 76 L90 116 L30 116 Z" fill="#f4e4e0" stroke="#3b2a22" stroke-width="2.4" stroke-linejoin="round"/>
+              <g transform="translate(60 96)" fill="#7d8f76"><circle cy="-6" r="4.4"/><circle cx="-5.6" cy="-2" r="4.4"/><circle cx="5.6" cy="-2" r="4.4"/><circle cx="-3.4" cy="4.6" r="4.4"/><circle cx="3.4" cy="4.6" r="4.4"/><circle r="2.6" fill="#3b2a22"/></g>
+              <path d="M50 -10 q-6 8 0 14 q6 6 0 14" fill="none" stroke="#b9ab9d" stroke-width="2" stroke-linecap="round" class="steam"/>
+              <path d="M68 -8 q-6 8 0 14 q6 6 0 14" fill="none" stroke="#b9ab9d" stroke-width="2" stroke-linecap="round" class="steam steam--2"/>
+            </svg>
+          </div>
+          <div class="sticker"><b>To go</b><span>in 5 Min.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- So funktioniert To go -->
+    <section class="steps" id="togo">
+      <div class="container">
+        <div class="steps__grid">
+          <div class="step"><span class="step__n">1</span><h3>Antippen & anpassen</h3><p>Größe, Milch, Farbwelt oder Grußkarte – so wie du es magst.</p></div>
+          <div class="step"><span class="step__n">2</span><h3>Abholzeit wählen</h3><p>Sofort, später oder an einem anderen Tag – verbindlich vorbestellen.</p></div>
+          <div class="step"><span class="step__n">3</span><h3>Mitnehmen</h3><p>Wir sagen Bescheid, sobald es fertig ist. Bezahlt wird am Tresen.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nächster Anlass -->
+    <section class="container">
+      <a class="event-teaser" id="eventTeaser" href="anlaesse.html" hidden></a>
+    </section>
+
+    <!-- Karte -->
+    <section class="menu" id="karte">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Unsere Karte</span>
+          <h2>Frisch gebrüht, <em>zum Mitnehmen.</em></h2>
+          <p>Tippe auf ein Getränk, um Größe, Milch oder einen Extra-Shot zu wählen – oder leg es mit <b>+</b> direkt in die Tüte. Mit eigenem Mehrwegbecher sparst du <b data-shop="reusableAmount">0,30 €</b>.</p>
+        </div>
+        <nav class="chips" id="menuChips" aria-label="Kategorien"></nav>
+        <div id="menuSections"><p class="loading">Karte wird geladen …</p></div>
+      </div>
+    </section>
+
+    <!-- Sträuße -->
+    <section class="bouquets" id="straeusse">
+      <div class="container">
+        <div class="section-head section-head--left">
+          <span class="eyebrow">Frische Sträuße</span>
+          <h2>Täglich gebunden, <em>sofort zum Mitnehmen.</em></h2>
+          <p>Wähle deine Farbwelt und leg eine Grußkarte mit deinem Text dazu. Für Hochzeiten, Events & Firmen gestalten wir gerne individuell.</p>
+        </div>
+        <div class="bouquet-grid" id="bouquetGrid"></div>
+      </div>
+    </section>
+
+    <!-- Bohnen -->
+    <section class="beans" id="bohnen">
+      <div class="container">
+        <div class="section-head section-head--left">
+          <span class="eyebrow">Für zuhause</span>
+          <h2>Kaffeebohnen <em>aller Art.</em></h2>
+          <p>Von der schokoladigen Espresso-Mischung bis zur blumigen Filter-Röstung. Wir mahlen passend für deine Zubereitung.</p>
+        </div>
+        <div class="bean-grid" id="beanGrid"></div>
+      </div>
+    </section>
+
+    <!-- Anfrage -->
+    <section class="inquiry" id="anfrage">
+      <div class="container inquiry__inner">
+        <div class="inquiry__text">
+          <span class="eyebrow">Größere Projekte</span>
+          <h2>Blumen für <em>besondere Anlässe.</em></h2>
+          <p>Hochzeit, Firmenfeier, Tischdeko oder ein wöchentliches Blumen-Abo fürs Büro – erzähl uns von deinem Anlass. Wir melden uns innerhalb eines Werktags mit einem Vorschlag.</p>
+          <ul class="occasions">
+            <li><svg><use href="#i-bouquet"/></svg>Hochzeiten & Brautsträuße</li>
+            <li><svg><use href="#i-flower"/></svg>Events & Tischdekoration</li>
+            <li><svg><use href="#i-leaf"/></svg>Blumen-Abo für Büro & Praxis</li>
+            <li><svg><use href="#i-flower"/></svg>Trauerfloristik</li>
+          </ul>
+          <a class="text-link" href="anlaesse.html">Valentinstag, Muttertag & Co. → Zu den Anlässen</a>
+        </div>
+        <form class="inquiry__form" id="inquiryForm" novalidate>
+          <div class="field-row">
+            <label class="field"><span>Name *</span><input name="name" required autocomplete="name"></label>
+            <label class="field"><span>Telefon</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel"></label>
+          </div>
+          <label class="field"><span>E-Mail *</span><input name="email" type="email" required autocomplete="email" inputmode="email"></label>
+          <div class="field-row">
+            <label class="field"><span>Anlass *</span>
+              <select name="occasion" required>
+                <option value="">Bitte wählen</option>
+                <option>Hochzeit</option><option>Event / Feier</option><option>Blumen-Abo</option><option>Trauerfloristik</option><option>Sonstiges</option>
+              </select>
+            </label>
+            <label class="field"><span>Datum</span><input name="date" type="date"></label>
+          </div>
+          <label class="field"><span>Budget (ca.)</span>
+            <select name="budget"><option value="">Noch offen</option><option>bis 100 €</option><option>100 – 300 €</option><option>300 – 800 €</option><option>über 800 €</option></select>
+          </label>
+          <label class="field"><span>Deine Idee *</span><textarea name="message" rows="4" required placeholder="Farben, Blumen, Stil, Anzahl der Gäste …"></textarea></label>
+          <p class="form-note" id="inquiryNote" hidden></p>
+          <button class="btn btn--primary btn--block" type="submit" id="inquirySend">Anfrage senden</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Besuch -->
+    <section class="visit" id="besuch">
+      <div class="container visit__grid">
+        <div class="visit__card visit__card--dark">
+          <span class="eyebrow">Besuch uns</span>
+          <h2>Klein, aber <em>fein.</em></h2>
+          <p>Wir haben nur <b><span data-shop="seats">8</span> Plätze</b> – am schnellsten geht's deshalb to go. Vorbestellen, abholen und mit Kaffee und Blumen durch die Fußgängerzone schlendern.</p>
+          <address>
+            <svg><use href="#i-pin"/></svg>
+            <span><b data-shop="name">Blüte & Bohne</b><br><span data-shop="street">Hauptstraße 12</span> · <span data-shop="area">Fußgängerzone</span><br><span data-shop="city">12345 Musterstadt</span></span>
+          </address>
+          <div class="visit__links">
+            <a class="btn btn--light" id="mapsLink" href="#" target="_blank" rel="noopener">Route planen</a>
+            <a class="btn btn--outline-light" id="phoneLink" href="#">Anrufen</a>
+          </div>
+        </div>
+        <div class="visit__card">
+          <h3>Öffnungszeiten</h3>
+          <ul class="hours" id="hoursList"></ul>
+          <p class="visit__hint"><svg><use href="#i-leaf"/></svg><span>Bring deinen eigenen Becher mit – wir befüllen ihn gerne und du sparst <b data-shop="reusableAmount">0,30 €</b> pro Getränk.</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span data-year></span> <span data-shop="name">Blüte & Bohne</span></span>
+      <nav><a href="anlaesse.html">Anlässe</a><a href="#">Impressum</a><a href="#">Datenschutz</a></nav>
+    </div>
+  </footer>
+
+  <script src="js/shared.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f4ef">
+  <meta name="robots" content="noindex">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="B&B Dashboard">
+  <title>Dashboard · Blüte & Bohne</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%233b2a22'/><circle cx='32' cy='26' r='7' fill='%23f4e4e0'/><circle cx='24' cy='32' r='7' fill='%23f4e4e0'/><circle cx='40' cy='32' r='7' fill='%23f4e4e0'/><circle cx='28' cy='40' r='7' fill='%23f4e4e0'/><circle cx='36' cy='40' r='7' fill='%23f4e4e0'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <!-- Anmeldung -->
+  <section class="login" id="login">
+    <form class="login__box" id="loginForm">
+      <div class="login__mark">B&B</div>
+      <h1>Inhaber-Dashboard</h1>
+      <p>Bestellungen, Umsatz & Anfragen – live.</p>
+      <label class="field"><span>PIN</span><input id="pin" type="password" inputmode="numeric" autocomplete="current-password" placeholder="••••" required></label>
+      <p class="note note--error" id="loginError" hidden></p>
+      <button class="btn btn--primary btn--block" type="submit">Anmelden</button>
+    </form>
+  </section>
+
+  <div class="app" id="app" hidden>
+    <header class="top">
+      <div class="top__brand">
+        <span class="top__mark">B&B</span>
+        <div><b>Dashboard</b><span class="live" id="live"><i></i><em>Verbinde …</em></span></div>
+      </div>
+      <nav class="tabs" id="tabs">
+        <button class="tab is-active" data-tab="overview"><span class="tab__i">📊</span><span class="tab__l">Übersicht</span><span class="tab__s">Übersicht</span></button>
+        <button class="tab" data-tab="orders"><span class="tab__i">☕</span><span class="tab__l">Bestellungen</span><span class="tab__s">Live</span> <b id="badgeOrders" hidden></b></button>
+        <button class="tab" data-tab="preorders"><span class="tab__i">📅</span><span class="tab__l">Vorbestellungen</span><span class="tab__s">Vorbestellt</span> <b id="badgePre" hidden></b></button>
+        <button class="tab" data-tab="inquiries"><span class="tab__i">✉️</span><span class="tab__l">Anfragen</span><span class="tab__s">Anfragen</span> <b id="badgeInq" hidden></b></button>
+      </nav>
+      <div class="top__actions">
+        <button class="icon-btn" id="soundBtn" title="Ton bei neuen Bestellungen">🔔</button>
+        <a class="icon-btn" href="index.html" target="_blank" title="Website öffnen">↗</a>
+        <button class="icon-btn" id="logout" title="Abmelden">⏻</button>
+      </div>
+    </header>
+
+    <div class="demo" id="demoBar" hidden>
+      <span>Du siehst <b>Demo-Daten</b>, damit das Dashboard nicht leer ist.</span>
+      <button class="btn btn--small" id="demoDelete">Demo-Daten löschen</button>
+    </div>
+
+    <main class="main">
+      <!-- Übersicht -->
+      <section class="view" id="view-overview">
+        <div class="view__head">
+          <div><h1 id="overviewTitle">Heute</h1><p class="muted" id="overviewSub"></p></div>
+          <div class="seg" id="range" role="radiogroup" aria-label="Zeitraum">
+            <button class="is-active" data-range="1" role="radio" aria-checked="true">Heute</button>
+            <button data-range="7" role="radio" aria-checked="false">7 Tage</button>
+          </div>
+        </div>
+
+        <div class="kpis" id="kpis"></div>
+
+        <div class="grid">
+          <article class="card card--wide">
+            <header class="card__head"><div><h2 id="chartTimeTitle">Bestellungen pro Stunde</h2><p class="muted" id="chartTimeSub"></p></div><button class="link" data-table="tableTime">Tabelle</button></header>
+            <div class="chart" id="chartTime"></div>
+            <div class="table-wrap" id="tableTime" hidden></div>
+          </article>
+
+          <article class="card">
+            <header class="card__head"><div><h2>Umsatz nach Bereich</h2><p class="muted" id="mixSub"></p></div><button class="link" data-table="tableMix">Tabelle</button></header>
+            <div id="chartMix"></div>
+            <div class="table-wrap" id="tableMix" hidden></div>
+          </article>
+
+          <article class="card">
+            <header class="card__head"><div><h2>Top-Produkte</h2><p class="muted">nach verkaufter Menge</p></div><button class="link" data-table="tableTop">Tabelle</button></header>
+            <div class="chart" id="chartTop"></div>
+            <div class="table-wrap" id="tableTop" hidden></div>
+          </article>
+
+          <article class="card card--wide">
+            <header class="card__head"><div><h2>Gerade offen</h2><p class="muted">Bestellungen für heute, die noch nicht abgeholt sind</p></div><button class="link" data-goto="orders">Alle ansehen →</button></header>
+            <ul class="mini-list" id="openMini"></ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bestellungen (Live-Board) -->
+      <section class="view" id="view-orders" hidden>
+        <div class="view__head"><div><h1>Bestellungen heute</h1><p class="muted">Tippe auf den Button, um den Status weiterzuschalten – der Gast sieht ihn sofort.</p></div></div>
+        <div class="board">
+          <div class="lane"><h2><i class="dot dot--new"></i>Neu <b id="cntNeu">0</b></h2><div class="lane__list" id="laneNeu"></div></div>
+          <div class="lane"><h2><i class="dot dot--prep"></i>In Zubereitung <b id="cntPrep">0</b></h2><div class="lane__list" id="lanePrep"></div></div>
+          <div class="lane"><h2><i class="dot dot--ready"></i>Abholbereit <b id="cntReady">0</b></h2><div class="lane__list" id="laneReady"></div></div>
+        </div>
+        <details class="done-list"><summary>Heute abgeholt / storniert <b id="cntDone">0</b></summary><div id="doneList"></div></details>
+      </section>
+
+      <!-- Vorbestellungen -->
+      <section class="view" id="view-preorders" hidden>
+        <div class="view__head"><div><h1>Vorbestellungen</h1><p class="muted">Was an den kommenden Tagen abgeholt wird – inkl. Einkaufs- und Bindeliste.</p></div></div>
+        <div id="preList"></div>
+      </section>
+
+      <!-- Anfragen -->
+      <section class="view" id="view-inquiries" hidden>
+        <div class="view__head"><div><h1>Anfragen</h1><p class="muted">Hochzeiten, Events, Abos & mehr aus dem Formular der Website.</p></div></div>
+        <div class="inq-list" id="inqList"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

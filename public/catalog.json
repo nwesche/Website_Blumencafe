@@ -1,0 +1,144 @@
+{
+  "shop": {
+    "name": "Blüte & Bohne",
+    "street": "Hauptstraße 12",
+    "area": "Fußgängerzone",
+    "city": "12345 Musterstadt",
+    "phone": "01234 567890",
+    "email": "hallo@bluete-bohne.de",
+    "whatsapp": "491511234567",
+    "seats": 8,
+    "reusableDiscount": 0.3,
+    "slotMinutes": 10,
+    "maxDaysAhead": 60
+  },
+
+  "hours": {
+    "1": ["07:30", "18:30"],
+    "2": ["07:30", "18:30"],
+    "3": ["07:30", "18:30"],
+    "4": ["07:30", "18:30"],
+    "5": ["07:30", "18:30"],
+    "6": ["08:00", "17:00"],
+    "0": ["10:00", "15:00"]
+  },
+
+  "categories": [
+    { "id": "coffee", "label": "Kaffee to go", "hint": "in ca. 5 Min. fertig" },
+    { "id": "flowerdrinks", "label": "Blüten-Spezialitäten", "hint": "Hausgemacht mit essbaren Blüten" },
+    { "id": "cold", "label": "Kalt", "hint": "Erfrischend für unterwegs" },
+    { "id": "beans", "label": "Bohnen für zuhause", "hint": "250 g · ganze Bohne oder gemahlen" },
+    { "id": "bouquets", "label": "Sträuße", "hint": "Täglich frisch gebunden" },
+    { "id": "event", "label": "Anlässe", "hint": "Zum Vorbestellen" }
+  ],
+
+  "options": {
+    "size": { "label": "Größe", "choices": [
+      { "id": "m", "label": "0,3 l", "price": 0 },
+      { "id": "l", "label": "0,4 l", "price": 0.6 }
+    ]},
+    "milk": { "label": "Milch", "choices": [
+      { "id": "kuh", "label": "Kuhmilch", "price": 0 },
+      { "id": "hafer", "label": "Hafer", "price": 0.4 },
+      { "id": "mandel", "label": "Mandel", "price": 0.4 },
+      { "id": "lf", "label": "Laktosefrei", "price": 0 }
+    ]},
+    "shot": { "label": "Extra-Shot", "choices": [
+      { "id": "no", "label": "Ohne", "price": 0 },
+      { "id": "yes", "label": "+ 1 Shot", "price": 0.6 }
+    ]},
+    "grind": { "label": "Mahlgrad", "choices": [
+      { "id": "bean", "label": "Ganze Bohne", "price": 0 },
+      { "id": "espresso", "label": "Espresso", "price": 0 },
+      { "id": "filter", "label": "Filter", "price": 0 },
+      { "id": "press", "label": "French Press", "price": 0 }
+    ]},
+    "color": { "label": "Farbwelt", "choices": [
+      { "id": "wahl", "label": "Floristenwahl", "price": 0 },
+      { "id": "rose", "label": "Rosé & Creme", "price": 0 },
+      { "id": "weiss", "label": "Weiß & Grün", "price": 0 },
+      { "id": "bunt", "label": "Bunt", "price": 0 }
+    ]},
+    "wreath": { "label": "Stil", "choices": [
+      { "id": "natur", "label": "Natur", "price": 0 },
+      { "id": "weissgold", "label": "Weiß & Gold", "price": 0 },
+      { "id": "rot", "label": "Klassisch Rot", "price": 0 }
+    ]},
+    "combodrink": { "label": "Kaffee dazu", "choices": [
+      { "id": "cappuccino", "label": "Cappuccino", "price": 0 },
+      { "id": "flatwhite", "label": "Flat White", "price": 0 },
+      { "id": "latte", "label": "Latte Macchiato", "price": 0 },
+      { "id": "rose-latte", "label": "Rosen-Latte", "price": 0.8 }
+    ]},
+    "card": { "label": "Grußkarte", "text": true, "choices": [
+      { "id": "no", "label": "Ohne", "price": 0 },
+      { "id": "yes", "label": "Mit Karte", "price": 2.5 }
+    ]}
+  },
+
+  "products": [
+    { "id": "espresso", "cat": "coffee", "name": "Espresso", "desc": "Hausmischung, kräftig & schokoladig", "price": 2.2, "prep": 3, "drinks": 1, "options": ["shot"] },
+    { "id": "cappuccino", "cat": "coffee", "name": "Cappuccino", "desc": "Samtiger Milchschaum, doppelter Shot", "price": 3.4, "prep": 5, "drinks": 1, "popular": true, "options": ["size", "milk", "shot"] },
+    { "id": "flatwhite", "cat": "coffee", "name": "Flat White", "desc": "Mehr Kaffee, weniger Schaum", "price": 3.8, "prep": 5, "drinks": 1, "options": ["milk", "shot"] },
+    { "id": "latte", "cat": "coffee", "name": "Latte Macchiato", "desc": "Mild & cremig", "price": 3.7, "prep": 5, "drinks": 1, "options": ["size", "milk", "shot"] },
+    { "id": "americano", "cat": "coffee", "name": "Americano", "desc": "Espresso mit heißem Wasser", "price": 2.9, "prep": 3, "drinks": 1, "options": ["size", "shot"] },
+    { "id": "filter", "cat": "coffee", "name": "Filterkaffee des Tages", "desc": "Wechselnde Single-Origin-Bohne", "price": 2.8, "prep": 3, "drinks": 1, "options": ["size"] },
+
+    { "id": "rose-latte", "cat": "flowerdrinks", "name": "Rosen-Latte", "desc": "Espresso, Milch & hausgemachter Rosensirup", "price": 4.5, "prep": 5, "drinks": 1, "popular": true, "tone": "rose", "options": ["size", "milk"] },
+    { "id": "lavender-latte", "cat": "flowerdrinks", "name": "Lavendel-Latte", "desc": "Mit Lavendelblüten aus der Region", "price": 4.5, "prep": 5, "drinks": 1, "tone": "lavender", "options": ["size", "milk"] },
+    { "id": "elderflower", "cat": "flowerdrinks", "name": "Holunderblüten-Limo", "desc": "Hausgemacht, mit Minze & Limette", "price": 3.8, "prep": 2, "drinks": 1, "tone": "sage", "options": ["size"] },
+    { "id": "hibiscus", "cat": "flowerdrinks", "name": "Hibiskus-Eistee", "desc": "Fruchtig, leicht gesüßt", "price": 3.5, "prep": 2, "drinks": 1, "tone": "rose", "options": ["size"] },
+
+    { "id": "coldbrew", "cat": "cold", "name": "Cold Brew", "desc": "18 Stunden kalt extrahiert", "price": 3.9, "prep": 2, "drinks": 1, "options": ["size"] },
+    { "id": "icedlatte", "cat": "cold", "name": "Iced Latte", "desc": "Doppelter Espresso auf Eis & Milch", "price": 4.2, "prep": 3, "drinks": 1, "options": ["size", "milk"] },
+    { "id": "espressotonic", "cat": "cold", "name": "Espresso Tonic", "desc": "Tonic, Eis, Zeste & ein Shot Espresso", "price": 4.5, "prep": 3, "drinks": 1, "options": [] },
+
+    { "id": "beans-house", "cat": "beans", "name": "Hausmischung Espresso", "desc": "Schokolade · Haselnuss · wenig Säure", "price": 9.9, "prep": 1, "notes": ["Espresso", "Siebträger"], "options": ["grind"] },
+    { "id": "beans-ethiopia", "cat": "beans", "name": "Äthiopien Yirgacheffe", "desc": "Jasmin · Bergamotte · Pfirsich", "price": 11.9, "prep": 1, "popular": true, "notes": ["Filter", "blumig"], "options": ["grind"] },
+    { "id": "beans-colombia", "cat": "beans", "name": "Kolumbien Huila", "desc": "Karamell · rote Äpfel · rund", "price": 10.9, "prep": 1, "notes": ["Filter", "Espresso"], "options": ["grind"] },
+    { "id": "beans-brazil", "cat": "beans", "name": "Brasilien Cerrado", "desc": "Nougat · Mandel · sehr mild", "price": 9.5, "prep": 1, "notes": ["Vollautomat"], "options": ["grind"] },
+    { "id": "beans-decaf", "cat": "beans", "name": "Entkoffeiniert Mexiko", "desc": "Kakao · Vanille · schonend entkoffeiniert", "price": 10.5, "prep": 1, "notes": ["Decaf"], "options": ["grind"] },
+
+    { "id": "bouquet-week", "cat": "bouquets", "name": "Strauß der Woche", "desc": "Saisonale Blumen, jede Woche neu", "price": 24, "prep": 5, "popular": true, "tone": "rose", "options": ["card"] },
+    { "id": "bouquet-s", "cat": "bouquets", "name": "Kleiner Gruß", "desc": "Handlich – perfekt als Mitbringsel", "price": 18, "prep": 5, "tone": "sage", "options": ["color", "card"] },
+    { "id": "bouquet-m", "cat": "bouquets", "name": "Lieblingsstrauß", "desc": "Üppig gebunden, in deiner Farbwelt", "price": 32, "prep": 10, "tone": "lavender", "options": ["color", "card"] },
+    { "id": "bouquet-l", "cat": "bouquets", "name": "Großes Dankeschön", "desc": "Opulent – für die besonderen Momente", "price": 48, "prep": 15, "tone": "peach", "options": ["color", "card"] },
+    { "id": "combo", "cat": "bouquets", "name": "Kaffee & Blume", "desc": "Kleiner Strauß + Kaffee nach Wahl – unser To-go-Klassiker", "price": 21.9, "prep": 5, "drinks": 1, "combo": true, "tone": "peach", "options": ["combodrink", "color"] },
+
+    { "id": "val-roses", "cat": "event", "event": "valentinstag", "name": "12 rote Rosen", "desc": "Langstielig, klassisch gebunden", "price": 49, "prep": 10, "tone": "rose", "options": ["card"] },
+    { "id": "val-bouquet", "cat": "event", "event": "valentinstag", "name": "Valentins-Strauß", "desc": "Rosen, Ranunkeln & Eukalyptus in Rosé", "price": 35, "prep": 10, "tone": "rose", "popular": true, "options": ["card"] },
+    { "id": "val-latte", "cat": "event", "event": "valentinstag", "name": "Herz-Latte", "desc": "Rosen-Latte mit Latte-Art-Herz", "price": 4.8, "prep": 5, "drinks": 1, "tone": "rose", "options": ["size", "milk"] },
+    { "id": "val-box", "cat": "event", "event": "valentinstag", "name": "Liebes-Paket", "desc": "Valentins-Strauß + 2 Herz-Latte to go", "price": 44, "prep": 10, "drinks": 2, "combo": true, "tone": "rose", "options": ["card"] },
+
+    { "id": "fem-tulips", "cat": "event", "event": "frauentag", "name": "Tulpen-Bund", "desc": "20 Tulpen in Frühlingsfarben", "price": 19, "prep": 5, "tone": "lavender", "popular": true, "options": ["color", "card"] },
+    { "id": "fem-team", "cat": "event", "event": "frauentag", "name": "Team-Strauß fürs Büro", "desc": "Großer Strauß für alle Kolleginnen", "price": 39, "prep": 15, "tone": "lavender", "options": ["color", "card"] },
+
+    { "id": "east-bouquet", "cat": "event", "event": "ostern", "name": "Osterstrauß", "desc": "Narzissen, Tulpen & Kätzchenweiden", "price": 29, "prep": 10, "tone": "sage", "popular": true, "options": ["card"] },
+    { "id": "east-wreath", "cat": "event", "event": "ostern", "name": "Frühlings-Tischkranz", "desc": "Mit Moos, Wachteleiern & Blüten", "price": 34, "prep": 15, "tone": "sage", "options": [] },
+
+    { "id": "mom-bouquet", "cat": "event", "event": "muttertag", "name": "Muttertags-Strauß", "desc": "Pfingstrosen, Rosen & Schleierkraut", "price": 34, "prep": 10, "tone": "peach", "popular": true, "options": ["color", "card"] },
+    { "id": "mom-set", "cat": "event", "event": "muttertag", "name": "Mama-Moment", "desc": "Kleiner Strauß + 250 g Bohnen nach Wahl", "price": 42, "prep": 10, "combo": true, "tone": "peach", "options": ["grind", "card"] },
+
+    { "id": "xmas-wreath", "cat": "event", "event": "advent", "name": "Adventskranz", "desc": "Frisch gebunden, mit 4 Kerzen", "price": 45, "prep": 20, "tone": "sage", "popular": true, "options": ["wreath"] },
+    { "id": "xmas-bouquet", "cat": "event", "event": "advent", "name": "Winterstrauß", "desc": "Amaryllis, Tanne & Zimtstangen", "price": 32, "prep": 10, "tone": "sage", "options": ["card"] },
+    { "id": "xmas-beans", "cat": "event", "event": "advent", "name": "Weihnachts-Röstung", "desc": "Geschenkbox · Lebkuchen · Orange · Kakao", "price": 14.9, "prep": 1, "tone": "peach", "options": ["grind", "card"] }
+  ],
+
+  "events": [
+    { "id": "valentinstag", "name": "Valentinstag", "rule": { "type": "fixed", "month": 2, "day": 14 }, "tone": "rose",
+      "tagline": "Sag's mit Blumen – und einem Herz-Latte.",
+      "desc": "Der Tag, an dem bei uns die meisten Rosen über den Tresen gehen. Bestell vor und hol deinen Strauß ohne Warten ab – auf Wunsch schon am Vortag." },
+    { "id": "frauentag", "name": "Weltfrauentag", "rule": { "type": "fixed", "month": 3, "day": 8 }, "tone": "lavender",
+      "tagline": "Blumen für die starken Frauen in deinem Leben.",
+      "desc": "Für Mama, Freundin, Kollegin – oder gleich das ganze Team. Unsere Tulpen-Bunde sind der Frühlingsbote schlechthin." },
+    { "id": "ostern", "name": "Ostern", "rule": { "type": "easter" }, "tone": "sage", "pickupDayBefore": true,
+      "tagline": "Frühling für den Ostertisch.",
+      "desc": "Osterstrauß und Tischkranz frisch gebunden. Tipp: Am Karsamstag abholen, dann ist zum Osterfrühstück alles bereit." },
+    { "id": "muttertag", "name": "Muttertag", "rule": { "type": "nthWeekday", "month": 5, "weekday": 0, "n": 2 }, "tone": "peach",
+      "tagline": "Danke sagen – mit Blumen und gutem Kaffee.",
+      "desc": "Unser beliebtester Tag im Jahr. Sichere dir deinen Muttertags-Strauß frühzeitig – die Pfingstrosen sind jedes Jahr schnell vergeben." },
+    { "id": "advent", "name": "Advent & Weihnachten", "rule": { "type": "fixed", "month": 12, "day": 24 }, "tone": "sage",
+      "tagline": "Gemütlich durch die Adventszeit.",
+      "desc": "Adventskränze frisch gebunden, Winterstrauß und unsere Weihnachts-Röstung als Geschenk. Kränze gibt es ab dem 20. November." }
+  ]
+}
